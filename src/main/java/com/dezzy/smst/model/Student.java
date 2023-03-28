@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
 import java.sql.Date;
+import java.time.LocalDate;
 
 
 @Entity
@@ -22,7 +23,7 @@ public class Student{
 
     @JsonFormat(pattern="yyyy-MM-dd")
     @Column
-    private Date birthday;
+    private LocalDate birthday;
     @Column(nullable = false)
     private String email;
 
@@ -31,7 +32,7 @@ public class Student{
 
     }
 
-    public Student(String firstName, String lastName, Date birthday, String email) {
+    public Student(String firstName, String lastName, LocalDate birthday, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthday = birthday;
@@ -62,11 +63,11 @@ public class Student{
         this.lastName = lastName;
     }
 
-    public Date getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 

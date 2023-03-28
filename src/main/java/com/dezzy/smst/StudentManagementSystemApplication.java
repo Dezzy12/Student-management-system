@@ -8,6 +8,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.sql.Date;
+import java.time.LocalDate;
+
+
 
 @SpringBootApplication
 public class StudentManagementSystemApplication implements CommandLineRunner {
@@ -22,10 +25,8 @@ public class StudentManagementSystemApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Student student1 = new Student("Neba", "Desmond", new Date(2022,12,21),"dezzypro99@gmail.com" );
-		studentRepository.save(student1);
+//		Student student1 = new Student("student", "three",LocalDate.of(2022,12,21),"student3@gmail.com" );
+//		studentRepository.save(student1);
 
-		Student student2 = new Student("M", "Jean", new Date(2022-01-22),"MJ@gmail.com" );
-		studentRepository.save(student2);
 	}
 }
