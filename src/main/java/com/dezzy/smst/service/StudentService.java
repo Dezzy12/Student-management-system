@@ -9,4 +9,10 @@ public interface StudentService {
     List<Student> getAllStudents();
 
     Student createStudent(Student student);
+
+
+    Student getStudentById(Long id);
+    Student updateStudent(Student student);
+
+
 }
